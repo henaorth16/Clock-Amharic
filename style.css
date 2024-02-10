@@ -1,0 +1,121 @@
+@font-face {
+    font-family: amharic;
+    src: url(./godana.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --hour: 0;
+    --min: 0;
+    --sec: 0;
+}
+body{
+    --primary-clr: #fefdffc9;
+    min-height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.circle{
+    --dist: 25rem;
+    --gap: calc(var(--dist) + .3rem);
+    background-image: radial-gradient(#5959592f, black 90%);
+    width: var(--dist);
+    height: var(--dist);
+    border-radius: 50%;
+    border: 1px solid #f3f3f3;
+    position: relative;
+    overflow: hidden;
+}
+ 
+.dots{
+    width: 4px;
+    height: 100%;
+    /* border-radius: 50%; */
+    /* background-color: red;  */
+    position: absolute;
+    top: 0;
+    left: 50%;
+} 
+.dots::after,.dots::before{
+    content: '';
+    width: 2px;
+    height: 4px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.dots::before{
+    left: 0;
+    top: 0%;
+}
+.bigdot::after, .bigdot::before{
+    width: 5px;
+    height: 8px;
+}
+.num{
+    background-color:;
+    width: 1rem;
+    height: calc((var(--dist) / 1.1)) ;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(70deg);
+    color: #f7f7f7;
+    font-size: 2rem;
+    font-family: amharic;
+    font-weight: 100;
+}
+
+.num span{
+    position: absolute;
+}
+.indicator{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.indicator > * {
+    height: calc(var(--dist) / 2.9 ) ;
+    width: .3rem;
+    background-color: var(--primary-clr);
+    border-radius: 50% 50% 0 0;
+    position: absolute;
+    top: calc(-1 * (var(--dist) / 2.9) );
+    left: 50%;
+    transform-origin:bottom center;
+    transform: translateX(-50%) rotate(0deg);
+}
+.hour{
+    height: 5.3rem;
+    top: -5.3rem;
+    transform: translateX(-50%) rotate(calc(30deg * var(--hour)));
+}
+.min{
+    width: .1rem;
+    height: 5.6rem;
+    top: -5.6rem;
+    transform: translateX(-50%) rotate(calc(6deg * var(--min)));
+}
+.sec{
+    width: .1rem;
+    transform: translateX(-50%) rotate(calc(6deg * var(--sec)));
+}
+.sec::before{
+    content: '';
+    width: 8px;
+    aspect-ratio: 1/1;
+    background-color: var(--primary-clr);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 100;
+}
