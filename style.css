@@ -20,6 +20,17 @@ body{
     justify-content: center;
     align-items: center;
 }
+.mute>i{
+    position: absolute;
+    top: 2rem;
+    right: 10%;
+    font-size: 3rem;
+    z-index: 999;
+    color: #ffffffb2;
+    cursor: pointer;
+    transform: translateX(50%);
+}
+
 .circle{
     --dist: 25rem;
     --gap: calc(var(--dist) + .3rem);

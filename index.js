@@ -1,5 +1,6 @@
 const circle = document.querySelector(".circle")
-// const  = document.querySelector(".circle")
+const audio = document.querySelector("audio")
+const mute = document.querySelector(".mute")
  
 const nums = document.querySelectorAll(".nums > *");
 const numsEl = document.querySelectorAll(".num > span");
@@ -15,6 +16,11 @@ for (let i = 0; i < numOfDots; i++) {
     }
     circle.appendChild(dotEl);
 };
+
+mute.addEventListener("click", () => {
+  mute.innerHTML = mute.innerHTML == `<i class="fa-solid fa-volume-low"></i>` ? `<i class="fa-solid fa-volume-xmark"></i>` : `<i class="fa-solid fa-volume-low"></i>`
+  mute.classList.toggle("muted")
+})
 
 nums.forEach((item, idx) => {
   item.style.transform = `translate(-50%, -50%) rotate(${idx * 30}deg)`;
@@ -32,5 +38,11 @@ setInterval(() => {
   document.documentElement.style.setProperty("--hour", hour);
   document.documentElement.style.setProperty("--min", min);
   document.documentElement.style.setProperty("--sec", sec);
+  if(mute.classList.contains("muted")) {
+      audio.volume = 0
+  }else{
+    audio.volume = 1
+  }
+  audio.play()
   console.log(new Date().getSeconds());
 }, 1000);
