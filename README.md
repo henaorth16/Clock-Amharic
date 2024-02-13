@@ -25,7 +25,7 @@ In Ethiopian time format, at the Morning time starts with 12:00. so the font col
 
 - HTML
 - CSS
-- JavaScript
+- **JavaScript**
 
 
 ## Contributing
