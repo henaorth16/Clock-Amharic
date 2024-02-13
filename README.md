@@ -19,7 +19,7 @@ To view the analog clock, simply open the `index.html` file in a web browser.
 
 ### What is the color refers?
 
-In Ethiopian time format, at the Morning time starts with 12:00. so the font color shows the amount of freshness :blush:
+In Ethiopian time format, at the Morning time starts with 12:00. so the font color shows the amount of your freshness :blush:
 
 ## Technologies Used
 
