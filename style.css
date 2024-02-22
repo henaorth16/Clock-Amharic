@@ -46,7 +46,7 @@ body{
 .dots{
     width: 4px;
     height: 100%;
-    /* border-radius: 50%; */
+    
     /* background-color: red;  */
     position: absolute;
     top: 0;
