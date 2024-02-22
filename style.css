@@ -46,8 +46,6 @@ body{
 .dots{
     width: 4px;
     height: 100%;
-    
-    /* backgro  */
     position: absolute;
     top: 0;
     left: 50%;
