@@ -5,7 +5,7 @@
 
 ### [Live Preview](https://amh-clock.netlify.app/)
 
-This project is an analog clock created using HTML, CSS, and JavaScript, featuring **Ge'ez** numbers for the time display. Ge'ez numbers are traditionally used in Ethiopia and Eritrea.
+This project is an analogue clock, created using HTML, CSS, and JavaScript, featuring **Ge'ez** numbers for the time display. Ge'ez numbers are traditionally used in Ethiopia and Eritrea.
 
 ## Features
 
